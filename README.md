@@ -1,4 +1,4 @@
-# Vue Blog
+# Vue Country Manager
 
 ## Project setup
 ```
