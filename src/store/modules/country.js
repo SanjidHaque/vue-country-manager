@@ -1,19 +1,26 @@
 import axios from 'axios';
 
 const state = {
-    countries: []
+    countries: [],
+    country: {}
 };
 
 const getters = {
-    countries: state => state.countries
+    getCountries: state => state.countries
 };
 
 const actions = {
     async fetchCountries({ commit }, searchString) {
-        const response = await axios
-            .get(`https://restcountries.eu/rest/v2/capital/${searchString}`);
-        commit('setCountries', response);
-        console.log(response);
+
+        try {
+            const response = await axios
+                .get(`https://restcountries.eu/rest/v2/capital/${searchString}`);
+            commit('setCountries', response.data);
+        } catch (e) {
+            commit('setCountries', []);
+        }
+
+
     }
 };
 
