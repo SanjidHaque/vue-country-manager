@@ -2,13 +2,13 @@
     <v-app id="app">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-3">
                     <SearchInput/>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-3">
                     <SearchResult/>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-3">
                     <SearchDetail/>
                 </div>
             </div>
