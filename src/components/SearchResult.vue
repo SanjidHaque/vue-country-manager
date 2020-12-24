@@ -8,7 +8,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div v-for="(country) in getCountries" v-bind:key="country.area">
-                    {{ country.name }}
+                    <div @click="onSelectCountry(country)">
+                        {{ country.name }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,11 +28,10 @@
         },
         computed: mapGetters(['getCountries']),
         methods: {
-
-
-        },
-        created() {
-            console.log(this.getCountries);
+            ...mapActions(['selectCountry']),
+            onSelectCountry(country) {
+                this.selectCountry(country)
+            }
         }
     }
 </script>
