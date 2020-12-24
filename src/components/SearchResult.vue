@@ -2,13 +2,13 @@
     <div>
         <div class="row">
             <div class="col-lg-12">
-                <h4>Result</h4>
+                <h4>Results</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div v-for="(country) in getCountries" v-bind:key="country.area">
-                    <div @click="onSelectCountry(country)">
+                    <div style="cursor: pointer" @click="onSelectCountry(country)">
                         {{ country.name }}
                     </div>
                 </div>
